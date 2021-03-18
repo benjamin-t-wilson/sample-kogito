@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"applicant":{"type":"object","properties":{"CreditScore":{"type":"integer"},"IsApproved":{"type":"boolean"},"Name":{"type":"string"}},"input":true}}}
