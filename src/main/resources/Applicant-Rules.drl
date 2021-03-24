@@ -1,0 +1,14 @@
+package org.acme
+
+import org.acme.Applicant;
+
+
+rule "Is approved" ruleflow-group "applicant"
+
+when
+    $applicant: Applicant(creditScore > 630)
+then
+    modify($applicant) { 
+        setApproved(true)
+    };
+end
