@@ -38,3 +38,9 @@ You can take a look at the [OpenAPI definition](http://localhost:8080/v3/api-doc
 In addition, various clients to interact with this service can be easily generated using this OpenAPI definition.
 
 http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/
+
+to build run:
+docker build -t sample-kogito .
+
+then use docker desktop to run image on desired port or:
+docker run -p 8080:8080 <image_tag>

@@ -19,11 +19,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(
-  scanBasePackages = { "org.acme.**", "org.kie.kogito.**", "http**" }
-)
+        scanBasePackages = { "org.acme.**", "org.kie.kogito.**", "http**" })
 public class KogitoApplication {
 
-  public static void main(String[] args) {
-    SpringApplication.run(KogitoApplication.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(KogitoApplication.class, args);
+    }
 }
