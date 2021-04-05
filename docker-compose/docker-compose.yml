@@ -104,3 +104,10 @@ services:
       - 8080:8080
     environment:
       kafka_bootstrap_servers: kafka:29092
+      kogito_service_url: http://localhost:8080
+      kogito_dataindex_http_url: data-index:8180
+      kogito_dataindex_ws_url: ws://data-index:8180
+      quarkus_infinispan_client_server: infinispan:11222
+      mp_messaging_outgoing_processinstances: kafka:9092
+      mp_messaging_outgoing_usertaskinstances: kafka:9092
+      mp_messaging_outgoing_variables_events: kafka:9092

@@ -1,12 +1,20 @@
-# org.kie.kogito.kogito-springboot-archetype - 1.3.0.Final #
+# org.kie.kogito.kogito-quarkus-archetype - 1.4.0.Final #
 
 # Running
 
 - Compile and Run
 
     ```
-    mvn clean package spring-boot:run    
+     mvn clean package quarkus:dev
     ```
+
+- Native Image (requires JAVA_HOME to point to a valid GraalVM)
+
+    ```
+    mvn clean package -Pnative
+    ```
+  
+  native executable (and runnable jar) generated in `target/`
 
 # Test your application
 
@@ -14,7 +22,6 @@ Generated application comes with sample test process that allows you to verify i
 
 ```sh
 curl -d '{}' -H "Content-Type: application/json" -X POST http://localhost:8080/greetings
-                                                             
 ```
 
 Once successfully invoked you should see "Hello World" in the console of the running application.
@@ -33,9 +40,15 @@ Then just build the project and run.
 # OpenAPI (Swagger) documentation
 [Specification at swagger.io](https://swagger.io/docs/specification/about/)
 
-You can take a look at the [OpenAPI definition](http://localhost:8080/v3/api-docs) - automatically generated and included in this service - to determine all available operations exposed by this service. For easy readability you can visualize the OpenAPI definition file using a UI tool like for example available [Swagger UI](https://editor.swagger.io).
+The exposed service [OpenAPI specification](https://swagger.io/docs/specification) is generated at 
+[/q/openapi](http://localhost:8080/q/openapi).
 
-In addition, various clients to interact with this service can be easily generated using this OpenAPI definition.
+You can visualize and interact with the generated specification using the embbeded [Swagger UI](http://localhost:8080/q/swagger-ui) or importing the generated specification file on [Swagger Editor](https://editor.swagger.io).
+
+In addition client application can be easily generated from the swagger definition to interact with this service.
+
+to run:
+mvn clean compile quarkus:dev
 
 http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/
 
