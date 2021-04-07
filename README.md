@@ -57,3 +57,5 @@ docker build -t sample-kogito .
 
 then use docker desktop to run image on desired port or:
 docker run -p 8080:8080 <image_tag>
+
+ASSUMES THAT BLAZOR UI IMAGE IS BUILT AND NAMED "blazor-ui"

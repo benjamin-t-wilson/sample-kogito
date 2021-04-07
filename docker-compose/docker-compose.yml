@@ -120,6 +120,10 @@ services:
     image: blazor-ui
     ports:
       - 5000:80
+    depends_on:
+      task-console:
+        condition: service_started
     environment:
       Kogito_BaseUrl: kogito:8080
       ASPNETCORE_ENVIRONMENT: Development
+      Kafka_BaseUrl: kafka:29092
