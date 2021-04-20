@@ -114,6 +114,8 @@ services:
       mp_messaging_outgoing_processinstances: kafka:9092
       mp_messaging_outgoing_usertaskinstances: kafka:9092
       mp_messaging_outgoing_variables_events: kafka:9092
+      mp_messaging_incoming_kogito_incoming_stream: kafka:29092
+      mp_messaging_outgoing_kogito_outgoing_stream: kafka:9092
 
   blazorui:
     container_name: blazorui
