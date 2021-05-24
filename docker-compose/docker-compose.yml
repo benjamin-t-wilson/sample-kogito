@@ -129,6 +129,7 @@ services:
       Kogito_BaseUrl: kogito:8080
       ASPNETCORE_ENVIRONMENT: Development
       Kafka_BaseUrl: kafka:29092
+      Ksql_BaseUrl: ksql-server:8088
 
   schema-registry:
     image: "confluentinc/cp-schema-registry:5.2.2"
